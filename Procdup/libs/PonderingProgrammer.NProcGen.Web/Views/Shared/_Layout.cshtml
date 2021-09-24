@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - proc-gen-lab</title>
+    <link rel="stylesheet" href="~/css/layout.css"/>
+</head>
+<body>
+<header>
+    <a asp-controller="Home" asp-action="Index"><img src="/img/procgenlab.png" alt="procgenlab" /></a>
+</header>
+<main role="main">
+    <div id="leftpane">
+        <ul>
+            <li><a asp-controller="Home" asp-action="PoppingRectangles">Popping Rectangles</a></li>
+            <li><a asp-controller="Home" asp-action="BuddingRectangles">Budding Rectangles</a></li>
+            <li><a asp-controller="Home" asp-action="PackedRectangles">Packed Rectangles</a></li>
+        </ul>
+    </div>
+    <div id="centerpane">@RenderBody()</div>
+    <div id="rightpane">@RenderSection("GenerationForm", false)</div>
+</main>
+
+<footer>
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+@RenderSection("Scripts", required: false)
+</body>
+</html>

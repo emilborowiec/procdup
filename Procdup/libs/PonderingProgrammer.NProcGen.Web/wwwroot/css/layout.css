@@ -1,0 +1,49 @@
+﻿html {
+    box-sizing: content-box;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    min-height: 100vh;
+}
+
+header img {
+    margin: 8px;
+    vertical-align: middle;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 84px);
+}
+
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 360px auto 360px;
+        grid-template-areas: 
+            "leftpane centerpane rightpane"
+    }
+}
+
+footer {
+    height: 60px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#leftpane {
+    grid-area: leftpane;
+}
+
+#centerpane {
+    grid-area: centerpane;
+}
+
+#rightpane {
+    grid-area: rightpane;
+}

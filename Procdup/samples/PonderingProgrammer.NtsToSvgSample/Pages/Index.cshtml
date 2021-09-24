@@ -1,0 +1,12 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">NetTopologySuite polygon drawn as html5 svg</h1>
+    <svg width="600" height="400">
+        @Html.Raw(Model.Svg)
+    </svg>
+</div>

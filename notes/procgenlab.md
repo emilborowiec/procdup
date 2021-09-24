@@ -1,0 +1,8 @@
+# ProcGenLab
+
+
+
+Program do proceduralnego generowania różnego rodzaju map.
+
+Pozwala wybrać używany algorytm generacji i graficznie dostosować jego parametryTypy mapPlanetRealmCityCountrysideInteriorPlatformerLevelDungeonLevelCaveComplexOutdoorLevelPozwala wyświetlać mapy jako geometria lub oskórkowane teksturami lub tilamiTileowanie BlobTileowanie NinepatchKomponenty programuStruktury danychBooleanMapBitmaskMapHeightMap
+Mapy polygonowe ortogonalne z otwartymi przetrzeniami i ścianamiHeight mapyRenderowanie map logicznychRenderowanie map logicznych przy użyciu tilemap Blob i NinepatchRenderowanie heightmap koloramiRenderowanie heightmap w 3d z texturami i patchami

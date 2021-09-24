@@ -1,0 +1,41 @@
+﻿@model PoppingRectanglesViewModel
+
+@{
+    ViewBag.Title = "Popping Rectangles";
+    Layout = "_Layout";
+}
+
+<div>
+    <h1>Square cell map generation with Popping Rectangles algorithm</h1>
+    <div style="width: 100%; height: 1000px; background-color: lightgray">
+        <svg viewBox="0 0 @(Model.Options.Width * MapViewModel.Scale) @(Model.Options.Height * MapViewModel.Scale)" overflow="auto" width="100%" height="100%">
+            @Html.Raw(Model?.Svg)
+        </svg>
+    </div>
+</div>
+
+
+@section GenerationForm {
+    <form asp-action="GenerateWithPoppingRectangles">
+        <div>
+            <label asp-for="Options.Width">Width</label>
+            <input asp-for="Options.Width"/>
+        </div>
+        <div>
+            <label asp-for="Options.Height">Height</label>
+            <input asp-for="Options.Height"/>
+        </div>
+        <div>
+            <label asp-for="Options.MinRectSize">Rectangle minimum size</label>
+            <input asp-for="Options.MinRectSize"/>
+        </div>
+        <div>
+            <label asp-for="Options.MaxRectSize">Rectangle maximum size</label>
+            <input asp-for="Options.MaxRectSize"/>
+        </div>
+        <div>
+            <div asp-validation-summary="All"></div>
+        </div>
+        <button type="submit">Generate</button>
+    </form>
+}
